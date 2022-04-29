@@ -4,140 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos - Justify Content</title>
+    <title>Fundamentos - Flex Grow</title>
     <style>
-        .container{
-            max-width: 400px;
-            border: 1px solid black;
-            margin: 0;
+        .flex-container{
             display: flex;
-            margin: 10px;
+            border: 2px solid black;
+            max-width: 300px;
+            justify-content: center;
         }
 
         .item{
-            background-color: blueviolet;
+            background-color: orangered;
             margin: 5px;
+            padding: 10px;
             text-align: center;
             color: white;
         }
 
-        .flex-start{
-            justify-content: flex-start;
+        .fg-0{
+            flex-grow: 0;
         }
 
-        .flex-end{
-            justify-content: flex-end;
-        }
-        
-        .center{
-            justify-content: center;
+        .fg-1{
+            flex-grow: 1;
         }
 
-        .space-between{
-            justify-content: space-between;
+        .fg-2{
+            flex-grow: 2;
         }
 
-        .space-around{
-            justify-content: space-around;
-        }
-
-        .red{
-            color: red;
-        }
-
-        .column{
-            flex-direction: column;
-            min-height: 200px;
+        .fg-3{
+            flex-grow: 3;
         }
     </style>
 </head>
 <body>
-    <h1 class="red">Row</h1>
-    <h1>Flex-Start</h1>
-    <section class="container flex-start">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-    </section>
-
-    <h1>Flex-End</h1>
-    <section class="container flex-end">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-    </section>
-
-    <h1>Center</h1>
-    <section class="container center">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1>Space Between</h1>
-    <section class="container space-between">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1>Space Around</h1>
-    <section class="container space-around">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1 class="red">Column</h1>
-    <h1>Flex-Start - (column)</h1>
-    <section class="container flex-start column">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1>Flex-End - (column)</h1>
-    <section class="container flex-end column">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1>Center - (column)</h1>
-    <section class="container center column">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1>Space Between - (column)</h1>
-    <section class="container space-between column">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
-
-    <h1>Space Around - (column)</h1>
-    <section class="container space-around column">
-        <div class="item">1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Outro item</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
-    </section>
+    <p>Flex-Grow: 0</p>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-0">C</div>
+        <div class="item fg-0">D</div>
+    </div>
+    
+    <p>Flex-Grow: 1</p>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+    
+    
+    <p>Flex-Grow: Alternados</p>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-2">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-1">D</div>
+    </div>
+    
+    <p>Flex-Grow: Alternados</p>
+    <div class="flex-container">
+        <div class="item fg-2">AAAAAA</div>
+        <div class="item fg-2">BBB</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-2">D</div>
+    </div>
 </body>
 </html>
