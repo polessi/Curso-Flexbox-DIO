@@ -4,116 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamentos - Align Content</title>
+    <title>Fundamentos - Flex Grow</title>
     <style>
-        .container{
-            height: 350px;
-            max-width: 300px;
+        .flex-container{
             display: flex;
-            flex-wrap: wrap;
-            border: 1px solid black;
+            border: 2px solid black;
+            max-width: 300px;
+            justify-content: center ;
         }
 
         .item{
             background-color: orangered;
-            padding: 0 5px;
             margin: 5px;
-            flex: 1;
+            padding: 10px;
             text-align: center;
             color: white;
-            border: 2px solid black;
         }
 
-        .stretch{
-            align-content: stretch;
+        .fg-0{
+            flex-grow: 0;
         }
 
-        .center{
-            align-content: center;
+        .fg-1{
+            flex-grow: 1;
         }
 
-        .flex-start{
-            align-content: flex-start;
+        .fg-2{
+            flex-grow: 2;
         }
 
-        .flex-end{
-            align-content: flex-end;
-        }
-
-        .space-around{
-            align-content: space-around;
-        }
-
-        .space-between{
-            align-content: space-between;
+        .fg-3{
+            flex-grow: 3;
         }
     </style>
 </head>
 <body>
-    <h3>Stretch</h3>
-    <div class="container stretch">
-        <div class="item">Lorem Ipsum is therefore always free from</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore always free</div>
-        <div class="item">Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
+    <p>Flex-Grow: 0</p>
+    <div class="flex-container">
+        <div class="item fg-0">A</div>
+        <div class="item fg-0">B</div>
+        <div class="item fg-0">C</div>
+        <div class="item fg-0">D</div>
     </div>
-
-    <h3>Center</h3>
-    <div class="container center">
-        <div class="item">Lorem Ipsum is therefore always free from</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore always free</div>
-        <div class="item">Lorem Ipsum is therefore from repetition, injected humour, or non-characteristic words etc.</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
+    
+    <p>Flex-Grow: 1</p>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-1">B</div>
+        <div class="item fg-1">C</div>
+        <div class="item fg-1">D</div>
     </div>
-
-    <h3>Flex-Start</h3>
-    <div class="container flex-start">
-        <div class="item">Lorem Ipsum is therefore always free from</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore always free</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
+    
+    
+    <p>Flex-Grow: Alternados</p>
+    <div class="flex-container">
+        <div class="item fg-1">A</div>
+        <div class="item fg-2">B</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-1">D</div>
     </div>
-
-    <h3>Flex-End</h3>
-    <div class="container flex-end">
-        <div class="item">Lorem Ipsum is therefore always free from</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore always free</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-    </div>
-
-    <h3>Space-Around</h3>
-    <div class="container space-around">
-        <div class="item">Lorem Ipsum is therefore always free from</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore always free</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-    </div>
-
-    <h3>Space-Between</h3>
-    <div class="container space-between">
-        <div class="item">Lorem Ipsum is therefore always free from</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore always free</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
-        <div class="item">Lorem Ipsum is therefore</div>
+    
+    <p>Flex-Grow: Alternados</p>
+    <div class="flex-container">
+        <div class="item fg-2">AAAAAA</div>
+        <div class="item fg-2">BBB</div>
+        <div class="item fg-2">C</div>
+        <div class="item fg-2">D</div>
     </div>
 </body>
 </html>
